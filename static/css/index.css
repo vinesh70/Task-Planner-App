@@ -1,0 +1,130 @@
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    color: #333;
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+    margin-top: 20px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Container styling */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Button styling */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #94c0ee;
+}
+
+/* Additional content */
+.features {
+    margin-top: 50px;
+}
+
+.features h2 {
+    text-align: center;
+    color: #333;
+}
+
+.features .feature {
+    margin-top: 30px;
+}
+
+.features .feature h3 {
+    color: #007bff;
+}
+
+.features .feature p {
+    color: #666;
+}
+
+/* Get Started section */
+.get-started {
+    margin-top: 50px;
+}
+
+.get-started h2 {
+    text-align: center;
+    color: #333;
+}
+
+.get-started p {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+    margin-top: 20px;
+}
+
+.buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* About section */
+.about {
+    margin-top: 50px;
+}
+
+.about h2 {
+    text-align: center;
+    color: #333;
+}
+
+.about p {
+    text-align: justify;
+    color: #666;
+    margin-top: 20px;
+}
+
+/* Contact section */
+.contact {
+    margin-top: 50px;
+}
+
+.contact h2 {
+    text-align: center;
+    color: #333;
+}
+
+.contact p {
+    text-align: center;
+    color: #666;
+    margin-top: 10px;
+}

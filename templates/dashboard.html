@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App - Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Your Dashboard, {{ session['username'] }}</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('create_todo') }}">Create a Todo</a></li>
+                <li><a href="{{ url_for('profile') }}">Profile</a></li>
+                <li><a href="{{ url_for('logout') }}">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="todo-list">
+            <h2>Todo List</h2>
+            {% if todos %}
+            <ul>
+                {% for todo in todos %}
+                <li>
+                    <h3>{{ todo.title }}</h3>
+                    <p>{{ todo.description }}</p>
+                    <p>Date: {{ todo.date }}</p>
+                    <p>Start Time: {{ todo.start_time }}</p>
+                    <p>End Time: {{ todo.end_time }}</p>
+                    <!-- Update form -->
+                    <form action="{{ url_for('update_todo', todo_id=todo._id) }}" method="post">
+                        <button type="submit">Update</button>
+                    </form>                    
+                    <!-- Delete form -->
+                    <form action="/delete_todo/{{ todo._id }}" method="post">
+                        <button type="submit">Delete</button>
+                    </form>
+                </li>
+                {% endfor %}
+            </ul>
+            {% else %}
+            <p>Hurrah! You have completed all your tasks. Time to relax and celebrate!</p>
+            {% endif %}
+        </section>
+    </main>
+</body>
+</html>

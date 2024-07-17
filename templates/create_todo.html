@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Todo - Todo App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/create_todo.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Create Todo</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+                <li><a href="{{ url_for('profile') }}">Profile</a></li>
+                <li><a href="{{ url_for('logout') }}">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="todo-form">
+            <h2>Add New Todo</h2>
+            <form action="{{ url_for('create_todo') }}" method="post"> <!-- Ensure method is set to POST -->
+                <label for="title" autocomplete="off">Title:</label>
+                <input type="text" id="title" name="title" required>
+                <label for="description" autocomplete="off">Description:</label>
+                <textarea id="description" name="description" required></textarea>
+                <label for="date">Date to Implement:</label>
+                <input type="date" id="date" name="date" required>
+                <label for="start-time">Time to Start:</label>
+                <input type="time" id="start-time" name="start-time" required>
+                <label for="end-time">Time to End:</label>
+                <input type="time" id="end-time" name="end-time" required>
+                <button type="submit">Add Todo</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

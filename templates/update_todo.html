@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App - Update Todo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/update_todo.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Update Todo</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+                <li><a href="{{ url_for('logout') }}">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="update-form">
+            <h2>Update Todo</h2>
+            <form action="/update_todo/{{ todo_id }}" method="post">
+                <label for="title" autocomplete="off">Title:</label>
+                <input type="text" id="title" name="title" value="{{ todo.title }}" required>
+                <label for="description" autocomplete="off"> Description:</label>
+                <textarea id="description" name="description" required>{{ todo.description }}</textarea>
+                <label for="date">Date to Implement:</label>
+                <input type="date" id="date" name="date" value="{{ todo.date }}" required>
+                <label for="start-time">Time to Start:</label>
+                <input type="time" id="start-time" name="start-time" value="{{ todo.start_time }}" required>
+                <label for="end-time">Time to End:</label>
+                <input type="time" id="end-time" name="end-time" value="{{ todo.end_time }}" required>
+                <button type="submit">Update</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App - Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/profile.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Your Profile</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+                <li><a href="{{ url_for('logout') }}">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section>
+            <h2>User Information</h2>
+            <div class="user-info">
+                <div class="user-info-item">
+                    <strong>Name:</strong> {{ user.name }}
+                </div>
+                <div class="user-info-item">
+                    <strong>Email:</strong> {{ user.email }}
+                </div>
+                <div class="user-info-item">
+                    <strong>Username:</strong> {{ user.username }}
+                </div>
+                <div class="user-info-item">
+                    <strong>Registration Date:</strong> {{ user.registration_date }}
+                </div>
+                <div class="user-info-item">
+                    <strong>Last Login:</strong> {{ user.last_login }}
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

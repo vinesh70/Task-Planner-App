@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Planner App - Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to Task Planner App</h1>
+            <p>Start organizing your tasks efficiently!</p>
+        </header>
+        
+        <section class="features">
+            <h2>Features</h2>
+            
+            <div class="feature">
+                <h3>Easy to Use</h3>
+                <p>Our Task Planner App is designed to be user-friendly, allowing you to manage your tasks efficiently.</p>
+            </div>
+            
+            <div class="feature">
+                <h3>Customizable</h3>
+                <p>You can customize your Tasks list by adding titles, descriptions, and setting specific dates and times for tasks.</p>
+            </div>
+            
+            <div class="feature">
+                <h3>Secure</h3>
+                <p>We take security seriously. Your data is encrypted and protected with industry-standard practices.</p>
+            </div>
+        </section>
+
+        <section class="get-started">
+            <h2>Get Started</h2>
+            <p>Ready to get organized? Register or login now to start using our Task Planner App!</p>
+            <div class="buttons">
+                <a href="{{ url_for('register') }}" class="button">Register</a>
+                <a href="{{ url_for('login') }}" class="button">Login</a>
+            </div>
+        </section>
+
+        <section class="about">
+            <h2>About Task Planner App</h2>
+            <p>Task Planner App is a simple yet powerful task management tool designed to help you organize your daily activities, prioritize tasks, and stay productive.</p>
+            <p>With features like customizable task lists, due date reminders, and secure data encryption, Task Planner App provides a seamless experience for managing your tasks efficiently.</p>
+        </section>
+
+        <section class="contact">
+            <h2>Contact Us</h2>
+            <p>If you have any questions, suggestions, or feedback, feel free to reach out to us. We'd love to hear from you!</p>
+            <p>Email: vineshryapak@gmail.com</p>
+            <p>Phone: +91 7021448700</p>
+        </section>
+    </div>
+</body>
+</html>
